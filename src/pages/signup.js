@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
-export default function signup(){
+export default function Signup(){
     const [form, setForm] = useState({});
     const Handleform = (e) => {
       setForm({

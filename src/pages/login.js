@@ -61,7 +61,7 @@ export default function login() {
             ></input>
             <div className="loginsign2">
             <div className="loginsign">
-              Don't have an account?
+              Don&apos;t have an account?
             <Link href="/signup">  <input
               id="formSubmit1"
               name="clickbutton"

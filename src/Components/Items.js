@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 
-function Item({ id, withOpacity, isDragging, imageUrl, style, ...props }, ref) {
+const Item=({ id, withOpacity, isDragging, imageUrl, style, ...props }, ref)=> {
   const inlineStyles = {
     opacity: withOpacity ? "0.5" : "1",
     transformOrigin: "50% 50%",
@@ -28,7 +28,7 @@ function Item({ id, withOpacity, isDragging, imageUrl, style, ...props }, ref) {
 
   return (
     <div ref={ref} style={inlineStyles} {...props}>
-      <Image src={imageUrl} style={{ width: "100%", height: "100%" }} alt="Item" />
+      <img src={imageUrl} style={{ width: "100%", height: "100%" }} alt="Item" />
     </div>
   );
 }

@@ -22,7 +22,7 @@ const SortableItem = ({id, imageUrl,rows,columns, ...props }) => {
  
   return (
     <div>
-     
+    
         <Items
           key={id}
           ref={setNodeRef}

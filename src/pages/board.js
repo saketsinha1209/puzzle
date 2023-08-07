@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Header from "@/components/header";
 import { Button, FormControl,FormControlLabel,FormLabel,RadioGroup,Radio } from "@mui/material";
-import PuzzleSlicer from "./Components/puzzleslicer";
+import PuzzleSlicer from "./Components/PuzzleSlicer";
 const Board = () => {
   const router = useRouter();
   const { query } = router;

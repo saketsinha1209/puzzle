@@ -3,7 +3,7 @@ export default function About() {
     <div className="about" style={{ height: "100%" }}>
       <div className="about-text">
         <h2 className="about-title">About me</h2>
-         "As a passionate and determined individual in
+         As a passionate and determined individual in
         the field of web development. I am currently working as a solo MERN
         (MongoDB Express.js, React.js Node.js) web developer. With a strong
         desire to learn and grow, I am actively seeking job opportunities to
@@ -37,10 +37,10 @@ export default function About() {
         learn from experienced professionals, and make a positive impact in the
         industry. If you have any opportunities available or would like to
         discuss how I can contribute to your project, I would be thrilled to
-        connect with you."
+        connect with you.
       </div>
       <div className="abouticon">
-        <Image src="/mern.png" id="mern"></Image>
+        <img src="/mern.png" id="mern"></img>
       </div>
     </div>
   );

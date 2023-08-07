@@ -54,7 +54,7 @@ useEffect(() => {
     let formattedTime= `${padNumber(hours)}:${padNumber(minutes)}:${padNumber(seconds)}`;
     useEffect(()=>{
       localStorage.setItem('time',formattedTime);
-    }) 
+    },[formattedTime]) 
     return formattedTime;
   };
 

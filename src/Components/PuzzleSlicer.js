@@ -14,9 +14,9 @@ import {
   SortableContext,
   rectSortingStrategy
 } from "@dnd-kit/sortable";
-import Items from "@/Components/items";
-import Grid from "@/Components/grid";
-import SortableItem from "@/Components/sortableitem";
+import Items from "@/Components/Items";
+import Grid from "@/Components/Grid";
+import SortableItem from "@/Components/SortableItem";
 
 const PuzzleSlicer = ({ imageUrl, rows, columns,setActive,setReset,reset }) => {
   const [items, setItems] = useState([]);

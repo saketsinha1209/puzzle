@@ -58,7 +58,7 @@ useEffect(() => {
 
   useEffect(() => {
     setFormattedTime(formatTime(timer));
-    localStorage.setItem("time", formatTime(timer)); // Store the formatted time in local storage
+    localStorage.setItem("time", formattedTime); // Store the formatted time in local storage
   }, [timer]);
   const padNumber = (number) => {
     return String(number).padStart(2, "0");

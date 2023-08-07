@@ -165,21 +165,21 @@ export default function Header() {
                 <MenuItem>
                   <Link href="/" passHref>
                     <div>
-                      <HomeIcon sx={{width:76,height:76}} />
+                      <HomeIcon class="nav-Icon"/>
                     </div>
                   </Link>
                 </MenuItem>
                 <MenuItem>
                   <Link href="/about" passHref>
                     <div>
-                      <InfoIcon sx={{width:76,height:76}} />
+                      <InfoIcon class="nav-Icon" />
                     </div>
                   </Link>
                 </MenuItem>
                 <MenuItem>
-                  <Link href="/contact" passHref>
+                  <Link href="/contact"  passHref>
                     <div>
-                      <ContactMailIcon sx={{width:76,height:76}} />
+                      <ContactMailIcon class="nav-Icon"/>
                     </div>
                   </Link>
                 </MenuItem>

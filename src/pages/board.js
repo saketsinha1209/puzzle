@@ -52,12 +52,14 @@ useEffect(() => {
     const seconds = time % 60;
 
     let formattedTime= `${padNumber(hours)}:${padNumber(minutes)}:${padNumber(seconds)}`;
-    useEffect(()=>{
-      localStorage.setItem('time',formattedTime);
-    },[formattedTime]) 
     return formattedTime;
   };
+  const [formattedTime, setFormattedTime] = useState("00:00:00");
 
+  useEffect(() => {
+    setFormattedTime(formatTime(timer));
+    localStorage.setItem("time", formatTime(timer)); // Store the formatted time in local storage
+  }, [timer]);
   const padNumber = (number) => {
     return String(number).padStart(2, "0");
   };

@@ -302,6 +302,7 @@ input[type="text"] {
 .btnclass{
   display:flex;
   justify-content: space-between;
+  color: aqua;
 }
 .headerbtn{
   display: flex;

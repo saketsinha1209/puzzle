@@ -6,11 +6,7 @@ body{
   margin: 0;
   padding: 0;
 }
-.nav-Icon{
-  color:aqua;
-  width: 1.5rem;
-  height: 1.5rem;
-}
+
 .logoheader{
   display: flex;
   flex-direction: row;

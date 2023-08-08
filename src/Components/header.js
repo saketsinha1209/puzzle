@@ -165,21 +165,21 @@ export default function Header() {
                 <MenuItem>
                   <Link href="/" passHref>
                     <div>
-                      <HomeIcon class="nav-Icon"/>
+                      <HomeIcon sx={{color:"aqua"}}/>
                     </div>
                   </Link>
                 </MenuItem>
                 <MenuItem>
                   <Link href="/about" passHref>
                     <div>
-                      <InfoIcon class="nav-Icon" />
+                      <InfoIcon sx={{color:"aqua"}}/>
                     </div>
                   </Link>
                 </MenuItem>
                 <MenuItem>
                   <Link href="/contact"  passHref>
                     <div>
-                      <ContactMailIcon class="nav-Icon"/>
+                      <ContactMailIcon sx={{color:"aqua"}} />
                     </div>
                   </Link>
                 </MenuItem>
@@ -248,7 +248,7 @@ export default function Header() {
                 <Tooltip title="Home" arrow>
                   <Link href="/" passHref>
                     <div>
-                      <HomeIcon />
+                      <HomeIcon sx={{color:"aqua",width:"2rem",height:"2rem"} } />
                     </div>
                   </Link>
                 </Tooltip>
@@ -258,7 +258,7 @@ export default function Header() {
                 <Tooltip title="About Us" arrow>
                   <Link href="/about" passHref>
                     <div>
-                      <InfoIcon />
+                      <InfoIcon sx={{color:"aqua",width:"2rem",height:"2rem"} }/>
                     </div>
                   </Link>
                 </Tooltip>
@@ -267,7 +267,7 @@ export default function Header() {
                 <Tooltip title="Contact Us" arrow>
                   <Link href="/contact" passHref>
                     <div>
-                      <ContactMailIcon />
+                      <ContactMailIcon sx={{color:"aqua",width:"2rem",height:"2rem"} } />
                     </div>
                   </Link>
                 </Tooltip>

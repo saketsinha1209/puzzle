@@ -29,6 +29,8 @@ const SortableItem = ({id, imageUrl,rows,columns, ...props }) => {
           style={style}
           withOpacity={isDragging}
           imageUrl={imageUrl}
+          rows={rows}
+          columns={columns}
           {...props}
           {...attributes}
           {...listeners}

@@ -1,7 +1,7 @@
 import React from "react"
 import { useSortable } from "@dnd-kit/sortable"
 import { CSS } from "@dnd-kit/utilities"
-import Items from "@/Components/items";
+import Items from "@/Components/Items";
 
 const SortableItem = ({id, imageUrl,rows,columns, ...props }) => {
   const {

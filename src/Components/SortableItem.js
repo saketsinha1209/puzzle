@@ -1,11 +1,9 @@
 import React from "react"
 import { useSortable } from "@dnd-kit/sortable"
 import { CSS } from "@dnd-kit/utilities"
-import Items from "@/Components/Items";
+import Items from "@/Components/items";
 
 const SortableItem = ({id, imageUrl,rows,columns, ...props }) => {
-
-  
   const {
     isDragging,
     attributes,
@@ -29,6 +27,8 @@ const SortableItem = ({id, imageUrl,rows,columns, ...props }) => {
           style={style}
           withOpacity={isDragging}
           imageUrl={imageUrl}
+          rows={rows}
+          columns={columns}
           {...props}
           {...attributes}
           {...listeners}

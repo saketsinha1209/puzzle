@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import Header from "@/Components/header";
 import { Button, FormControl,FormControlLabel,FormLabel,RadioGroup,Radio } from "@mui/material";
 import PuzzleSlicer from "@/Components/PuzzleSlicer";
+import { useDispatch, useSelector } from "react-redux";
+import { updateCurrency } from "@/redux/create";
 const Board = () => {
   const router = useRouter();
   const { query } = router;
@@ -104,7 +106,7 @@ useEffect(() => {
       .then((scores) => setPreviousScores(scores))
       .catch((error) => console.error(error));
   }, [username]);
-  
+
   const handleStartTimer = () => {
     setActive(true);
     setStartClicked(true);
@@ -113,7 +115,6 @@ useEffect(() => {
   const handleStopTimer = () => {
     setActive(false);
   };
-
   const handleResetTimer = () => {
     setActive(true);
     setReset(true);
@@ -126,21 +127,25 @@ useEffect(() => {
       case 'Very easy':
         setRows(3);
         setColumns(3);
+    
         break;
       case 'Easy':
         setRows(4);
         setColumns(4);
+      
         break;
       case 'Medium':
         setRows(6);
         setColumns(6);
+     
         break;
         default:
           setRows(3);
           setColumns(3);
     }
     setDifficulty(diffi)
-  };
+  }
+  const currencyAmount = useSelector((state) => state.currency.currencyAmount);
   return (
     <>
       <Header />
@@ -155,6 +160,17 @@ useEffect(() => {
          />}
         </div>
         <div className="features">
+        <div className="currency-section">
+  <div className="currency-container">
+    <div className="currency-icon">
+      <img src="./money.png" alt="Coin Icon" />
+    </div>
+    <div className="currency-text">
+      <h2>{currencyAmount} Coins</h2>
+    </div>
+  </div>
+</div>
+
           <div className="features1">
           <div className="colorpicker">
             <label id="boardpicker" style={{ color: "white" }}>

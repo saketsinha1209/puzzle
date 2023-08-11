@@ -17,4 +17,3 @@ const Grid = ({ children, columns }) => {
 }
 
 export default Grid;
-

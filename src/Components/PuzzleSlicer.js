@@ -14,10 +14,11 @@ import {
   SortableContext,
   rectSortingStrategy
 } from "@dnd-kit/sortable";
-import Items from "@/Components/Items";
-import Grid from "@/Components/Grid";
+import Items from "@/Components/items";
+import Grid from "@/Components/grid";
 import SortableItem from "@/Components/SortableItem";
-
+import {useDispatch} from 'react-redux';
+import { updateCurrency } from "@/redux/create";
 const PuzzleSlicer = ({ imageUrl, rows, columns,setActive,setReset,reset }) => {
   const [items, setItems] = useState([]);
   const [activeId, setActiveId] = useState(null);
@@ -34,7 +35,7 @@ const PuzzleSlicer = ({ imageUrl, rows, columns,setActive,setReset,reset }) => {
       audio.play();
       setPlaySound(true);
     }
-  }, [isCompleted, dialog, playSound]);
+  }, [isCompleted, playSound]);
   
  useEffect(() => {
   const name=localStorage.getItem("username");
@@ -81,7 +82,31 @@ const PuzzleSlicer = ({ imageUrl, rows, columns,setActive,setReset,reset }) => {
     console.log("Couldnt save the score");
   }
 };
+const dispatch = useDispatch();
+const handleCurrencyUpdate = (amount) => {
+  dispatch(updateCurrency(amount));
+};
+useEffect(() => {
+  if (isCompleted === true) {
+    let currencyAmount = 0;
 
+    if (rows === 3) {
+      currencyAmount = 100;
+    } else if (rows === 4) {
+      currencyAmount = 200;
+    } else {
+      currencyAmount = 500;
+    }
+
+    if (currencyAmount > 0) {
+      handleCurrencyUpdate(currencyAmount);
+      localStorage.setItem('coins', currencyAmount);
+    }
+  }  const storedCoins = localStorage.getItem('coins');
+  if (storedCoins !== null) {
+    handleCurrencyUpdate(parseInt(storedCoins));
+  }
+}, [isCompleted]);
 const getHighestScore = async () => {
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/scores/highest?username=${username}`);
@@ -133,7 +158,6 @@ useEffect(() => {
 const handleDragCancel = useCallback(() => {
     setActiveId(null);
   }, []);
-
   useEffect(() => {
     const image = new Image();
     image.setAttribute('crossOrigin', 'anonymous');
@@ -182,13 +206,11 @@ const handleDragCancel = useCallback(() => {
     }
     return newArray;
   };
-
-
   const correctOrder = Array.from({ length: rows * columns }, (_, index) => ({
     id: `${Math.floor(index / columns)}-${index % columns}`,
-  }));
+  }))
 
-  return (
+   return (
     <DndContext
       sensors={sensors}
       collisionDetection={closestCenter}

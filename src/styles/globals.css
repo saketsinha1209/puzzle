@@ -27,6 +27,7 @@ body{
 .btnclass{
   display: flex;
   justify-content: space-around;
+
 }
 h1{
   color:aqua;
@@ -233,11 +234,6 @@ label {
   margin-bottom: 5px;
   font-size: 1.2rem;
 }
-
-input[type="text"] {
-  width: 60%;
-  padding: 15px;
-}
 .form-actions {
   margin-top: 10px;
 }
@@ -302,6 +298,7 @@ input[type="text"] {
 .btnclass{
   display:flex;
   justify-content: space-between;
+  color :aqua;
 }
 .headerbtn{
   display: flex;
@@ -846,6 +843,30 @@ font-size: 12px;
   flex-direction: column;
 }
  }
+ .currency-container {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.currency-icon {
+  margin-right: 10px;
+}
+
+.currency-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.currency-text  {
+  font-size: 20px;
+  font-family: "start 2P",cursive;
+  color: aqua;
+  margin: 0;
+}
+
 
 
 

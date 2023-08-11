@@ -302,11 +302,7 @@ label {
 .btnclass{
   display:flex;
   justify-content: space-between;
-<<<<<<< HEAD
   color :aqua;
-=======
-  color: aqua;
->>>>>>> 5e611c99d3964d9fca8a7c5f3595005b71a1b3d2
 }
 .headerbtn{
   display: flex;

@@ -14,8 +14,8 @@ import {
   SortableContext,
   rectSortingStrategy
 } from "@dnd-kit/sortable";
-import Items from "@/Components/items";
-import Grid from "@/Components/grid";
+import Items from "@/Components/Items";
+import Grid from "@/Components/Grid";
 import SortableItem from "@/Components/SortableItem";
 import {useDispatch} from 'react-redux';
 import { updateCurrency } from "@/redux/create";

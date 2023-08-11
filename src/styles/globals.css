@@ -234,6 +234,10 @@ label {
   margin-bottom: 5px;
   font-size: 1.2rem;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5e611c99d3964d9fca8a7c5f3595005b71a1b3d2
 .form-actions {
   margin-top: 10px;
 }
@@ -298,7 +302,11 @@ label {
 .btnclass{
   display:flex;
   justify-content: space-between;
+<<<<<<< HEAD
   color :aqua;
+=======
+  color: aqua;
+>>>>>>> 5e611c99d3964d9fca8a7c5f3595005b71a1b3d2
 }
 .headerbtn{
   display: flex;
